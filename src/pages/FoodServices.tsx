@@ -1,3 +1,4 @@
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Star, ArrowLeft, UtensilsCrossed, Coffee, Pizza } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -63,7 +64,7 @@ const FoodServices = () => {
   const localDishes: LocalDish[] = [
     {
       name: "Chousela Roti",
-      description: "Chawal ke aate se bani crispy roti, alag-alag sabziyon ke saath khayi jati hai",
+      description: "Crispy flatbread made from rice flour, served with various vegetable curries",
       price: "₹40",
       rating: 4.8,
       reviews: 156,
@@ -71,7 +72,7 @@ const FoodServices = () => {
     },
     {
       name: "Aamat",
-      description: "Chhattisgarhi-style mixed vegetable curry, jisme bamboo shoots aur masale dalte hain",
+      description: "Traditional Chhattisgarhi mixed vegetable curry with bamboo shoots and spices",
       price: "₹120",
       rating: 4.7,
       reviews: 143,
@@ -80,7 +81,7 @@ const FoodServices = () => {
     },
     {
       name: "Dubki Kadhi",
-      description: "Besan ke pakode aur kadhi ka ek swadisht combination",
+      description: "A delicious combination of besan dumplings in spiced yogurt curry",
       price: "₹80",
       rating: 4.6,
       reviews: 128,
@@ -88,7 +89,7 @@ const FoodServices = () => {
     },
     {
       name: "Faraa",
-      description: "Chawal ke aate se bane steamed dumplings, jo light aur healthy hote hain",
+      description: "Light and healthy steamed dumplings made from rice flour",
       price: "₹60",
       rating: 4.5,
       reviews: 112,
@@ -96,7 +97,7 @@ const FoodServices = () => {
     },
     {
       name: "Muthia",
-      description: "Chawal ya gehu ke aate se bane spicy aur crispy snacks",
+      description: "Spicy and crispy snacks made from rice or wheat flour",
       price: "₹30",
       rating: 4.7,
       reviews: 167,
@@ -105,7 +106,7 @@ const FoodServices = () => {
     },
     {
       name: "Chapda Chutney",
-      description: "Local delicacy jo red ants aur masalon se bani hoti hai",
+      description: "Local delicacy made from red ants and spices",
       price: "₹40",
       rating: 4.9,
       reviews: 89,
@@ -114,7 +115,7 @@ const FoodServices = () => {
     },
     {
       name: "Bore Baasi",
-      description: "Pichle din ke bache chawal ko paani aur dahi ke saath khaya jata hai, jo summer me refreshing hota hai",
+      description: "Refreshing summer dish made with leftover rice, water, and yogurt",
       price: "₹30",
       rating: 4.4,
       reviews: 95,
@@ -122,7 +123,7 @@ const FoodServices = () => {
     },
     {
       name: "Tilgur Laddu",
-      description: "Til aur gud se bane laddoo, jo winter me khaas taur par khaye jate hain",
+      description: "Traditional winter sweets made from sesame seeds and jaggery",
       price: "₹20/piece",
       rating: 4.8,
       reviews: 178,
@@ -130,7 +131,7 @@ const FoodServices = () => {
     },
     {
       name: "Dehati Chicken",
-      description: "Lokpriya spicy village-style chicken dish",
+      description: "Popular spicy village-style chicken preparation",
       price: "₹180",
       rating: 4.9,
       reviews: 234,
@@ -139,7 +140,7 @@ const FoodServices = () => {
     },
     {
       name: "Mahua Drink",
-      description: "Mahua ke phoolon se bani ek traditional local drink",
+      description: "Traditional beverage made from Mahua flowers",
       price: "₹40",
       rating: 4.6,
       reviews: 145,
@@ -216,7 +217,7 @@ const FoodServices = () => {
 
         {/* Local Specialties Section */}
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-          दंतेवाड़ा के फेमस फूड्स
+          Famous Foods of Dantewada
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {localDishes.map((dish, index) => (
@@ -238,16 +239,16 @@ const FoodServices = () => {
               <div className="flex items-center gap-2 mb-4">
                 {dish.isVeg ? (
                   <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm rounded-full">
-                    शाकाहारी
+                    Vegetarian
                   </span>
                 ) : (
                   <span className="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 text-sm rounded-full">
-                    नॉन-वेज
+                    Non-veg
                   </span>
                 )}
                 {dish.isSpicy && (
                   <span className="px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-100 text-sm rounded-full">
-                    🌶️ तीखा
+                    🌶️ Spicy
                   </span>
                 )}
               </div>
