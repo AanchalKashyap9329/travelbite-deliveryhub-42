@@ -15,8 +15,9 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
   const handleClick = () => {
     if (title.toLowerCase().includes('travel')) {
       navigate('/travel-services');
+    } else if (title.toLowerCase().includes('food')) {
+      navigate('/food-services');
     }
-    // Add other navigation conditions for other services here
   };
 
   return (
