@@ -1,4 +1,3 @@
-
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Star, ArrowLeft, UtensilsCrossed, Coffee, Pizza } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +11,16 @@ interface FoodOption {
   reviews: number;
   deliveryTime: string;
   minOrder: string;
+}
+
+interface LocalDish {
+  name: string;
+  description: string;
+  price: string;
+  rating: number;
+  reviews: number;
+  isSpicy?: boolean;
+  isVeg: boolean;
 }
 
 const FoodServices = () => {
@@ -51,6 +60,93 @@ const FoodServices = () => {
     }
   ];
 
+  const localDishes: LocalDish[] = [
+    {
+      name: "Chousela Roti",
+      description: "Chawal ke aate se bani crispy roti, alag-alag sabziyon ke saath khayi jati hai",
+      price: "₹40",
+      rating: 4.8,
+      reviews: 156,
+      isVeg: true
+    },
+    {
+      name: "Aamat",
+      description: "Chhattisgarhi-style mixed vegetable curry, jisme bamboo shoots aur masale dalte hain",
+      price: "₹120",
+      rating: 4.7,
+      reviews: 143,
+      isSpicy: true,
+      isVeg: true
+    },
+    {
+      name: "Dubki Kadhi",
+      description: "Besan ke pakode aur kadhi ka ek swadisht combination",
+      price: "₹80",
+      rating: 4.6,
+      reviews: 128,
+      isVeg: true
+    },
+    {
+      name: "Faraa",
+      description: "Chawal ke aate se bane steamed dumplings, jo light aur healthy hote hain",
+      price: "₹60",
+      rating: 4.5,
+      reviews: 112,
+      isVeg: true
+    },
+    {
+      name: "Muthia",
+      description: "Chawal ya gehu ke aate se bane spicy aur crispy snacks",
+      price: "₹30",
+      rating: 4.7,
+      reviews: 167,
+      isSpicy: true,
+      isVeg: true
+    },
+    {
+      name: "Chapda Chutney",
+      description: "Local delicacy jo red ants aur masalon se bani hoti hai",
+      price: "₹40",
+      rating: 4.9,
+      reviews: 89,
+      isSpicy: true,
+      isVeg: false
+    },
+    {
+      name: "Bore Baasi",
+      description: "Pichle din ke bache chawal ko paani aur dahi ke saath khaya jata hai, jo summer me refreshing hota hai",
+      price: "₹30",
+      rating: 4.4,
+      reviews: 95,
+      isVeg: true
+    },
+    {
+      name: "Tilgur Laddu",
+      description: "Til aur gud se bane laddoo, jo winter me khaas taur par khaye jate hain",
+      price: "₹20/piece",
+      rating: 4.8,
+      reviews: 178,
+      isVeg: true
+    },
+    {
+      name: "Dehati Chicken",
+      description: "Lokpriya spicy village-style chicken dish",
+      price: "₹180",
+      rating: 4.9,
+      reviews: 234,
+      isSpicy: true,
+      isVeg: false
+    },
+    {
+      name: "Mahua Drink",
+      description: "Mahua ke phoolon se bani ek traditional local drink",
+      price: "₹40",
+      rating: 4.6,
+      reviews: 145,
+      isVeg: true
+    }
+  ];
+
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, index) => (
       <Star
@@ -66,7 +162,6 @@ const FoodServices = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-6">
-      {/* Header */}
       <div className="max-w-7xl mx-auto">
         <button
           onClick={() => navigate(-1)}
@@ -83,8 +178,8 @@ const FoodServices = () => {
           {t('foodDescription')}
         </p>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Restaurant Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {foodServices.map((service, index) => (
             <div
               key={index}
@@ -111,6 +206,56 @@ const FoodServices = () => {
               <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <span>🕒 {service.deliveryTime}</span>
                 <span>Min order: {service.minOrder}</span>
+              </div>
+              <button className="w-full px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+                Order Now
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Local Specialties Section */}
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          दंतेवाड़ा के फेमस फूड्स
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {localDishes.map((dish, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {dish.name}
+                </h3>
+                <span className="text-lg font-semibold text-green-600 dark:text-green-400">
+                  {dish.price}
+                </span>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {dish.description}
+              </p>
+              <div className="flex items-center gap-2 mb-4">
+                {dish.isVeg ? (
+                  <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm rounded-full">
+                    शाकाहारी
+                  </span>
+                ) : (
+                  <span className="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 text-sm rounded-full">
+                    नॉन-वेज
+                  </span>
+                )}
+                {dish.isSpicy && (
+                  <span className="px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-100 text-sm rounded-full">
+                    🌶️ तीखा
+                  </span>
+                )}
+              </div>
+              <div className="flex items-center mb-4">
+                <div className="flex mr-2">{renderStars(dish.rating)}</div>
+                <span className="text-gray-600 dark:text-gray-300">
+                  ({dish.reviews} reviews)
+                </span>
               </div>
               <button className="w-full px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
                 Order Now
