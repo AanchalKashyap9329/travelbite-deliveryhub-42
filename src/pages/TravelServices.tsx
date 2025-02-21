@@ -1,6 +1,6 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Star, ArrowLeft, Bike, Car, Scooter } from "lucide-react";
+import { Star, ArrowLeft, Bike, Car, Bike as BikeAlt } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface ServiceOption {
@@ -34,7 +34,7 @@ const TravelServices = () => {
       reviews: 243
     },
     {
-      icon: Scooter,
+      icon: BikeAlt,
       name: "Scooty Rental",
       price: "₹249/day",
       description: "Easy to ride scooties perfect for city navigation",
