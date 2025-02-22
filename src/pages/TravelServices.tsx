@@ -2,6 +2,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Star, ArrowLeft, Bike, Car, Bike as BikeAlt } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 interface ServiceOption {
   icon: any;
@@ -13,35 +14,38 @@ interface ServiceOption {
 }
 
 const TravelServices = () => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const navigate = useNavigate();
+  const [services, setServices] = useState<ServiceOption[]>([]);
 
-  const services: ServiceOption[] = [
-    {
-      icon: Bike,
-      name: t('bikeRental'),
-      price: "₹299/day",
-      description: t('bikeDescription'),
-      rating: 4.8,
-      reviews: 127
-    },
-    {
-      icon: Car,
-      name: t('taxiService'),
-      price: "₹15/km",
-      description: t('taxiDescription'),
-      rating: 4.7,
-      reviews: 243
-    },
-    {
-      icon: BikeAlt,
-      name: t('scootyRental'),
-      price: "₹249/day",
-      description: t('scootyDescription'),
-      rating: 4.9,
-      reviews: 156
-    }
-  ];
+  useEffect(() => {
+    setServices([
+      {
+        icon: Bike,
+        name: t('bikeRental'),
+        price: "₹299/day",
+        description: t('bikeDescription'),
+        rating: 4.8,
+        reviews: 127
+      },
+      {
+        icon: Car,
+        name: t('taxiService'),
+        price: "₹15/km",
+        description: t('taxiDescription'),
+        rating: 4.7,
+        reviews: 243
+      },
+      {
+        icon: BikeAlt,
+        name: t('scootyRental'),
+        price: "₹249/day",
+        description: t('scootyDescription'),
+        rating: 4.9,
+        reviews: 156
+      }
+    ]);
+  }, [t, currentLanguage]);
 
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, index) => (

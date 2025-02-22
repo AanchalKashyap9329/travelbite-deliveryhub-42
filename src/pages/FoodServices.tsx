@@ -1,7 +1,7 @@
-
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Star, ArrowLeft, UtensilsCrossed, Coffee, Pizza } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 interface FoodOption {
   icon: any;
@@ -25,41 +25,44 @@ interface LocalDish {
 }
 
 const FoodServices = () => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const navigate = useNavigate();
+  const [foodServices, setFoodServices] = useState<FoodOption[]>([]);
 
-  const foodServices: FoodOption[] = [
-    {
-      icon: UtensilsCrossed,
-      name: t('localDelights'),
-      cuisine: "Chhattisgarhi & North Indian",
-      description: t('foodDescription'),
-      rating: 4.8,
-      reviews: 342,
-      deliveryTime: "30-40 min",
-      minOrder: "₹99"
-    },
-    {
-      icon: Pizza,
-      name: t('fastFood'),
-      cuisine: "Fast Food & Snacks",
-      description: t('foodDescription'),
-      rating: 4.6,
-      reviews: 256,
-      deliveryTime: "25-35 min",
-      minOrder: "₹149"
-    },
-    {
-      icon: Coffee,
-      name: t('cafe'),
-      cuisine: "Beverages & Snacks",
-      description: t('foodDescription'),
-      rating: 4.7,
-      reviews: 189,
-      deliveryTime: "20-30 min",
-      minOrder: "₹79"
-    }
-  ];
+  useEffect(() => {
+    setFoodServices([
+      {
+        icon: UtensilsCrossed,
+        name: t('localDelights'),
+        cuisine: "Chhattisgarhi & North Indian",
+        description: t('foodDescription'),
+        rating: 4.8,
+        reviews: 342,
+        deliveryTime: "30-40 min",
+        minOrder: "₹99"
+      },
+      {
+        icon: Pizza,
+        name: t('fastFood'),
+        cuisine: "Fast Food & Snacks",
+        description: t('foodDescription'),
+        rating: 4.6,
+        reviews: 256,
+        deliveryTime: "25-35 min",
+        minOrder: "₹149"
+      },
+      {
+        icon: Coffee,
+        name: t('cafe'),
+        cuisine: "Beverages & Snacks",
+        description: t('foodDescription'),
+        rating: 4.7,
+        reviews: 189,
+        deliveryTime: "20-30 min",
+        minOrder: "₹79"
+      }
+    ]);
+  }, [t, currentLanguage]);
 
   const localDishes: LocalDish[] = [
     {
@@ -201,15 +204,15 @@ const FoodServices = () => {
               <div className="flex items-center mb-3">
                 <div className="flex mr-2">{renderStars(service.rating)}</div>
                 <span className="text-gray-600 dark:text-gray-300">
-                  ({service.reviews} reviews)
+                  ({service.reviews} {t('reviews')})
                 </span>
               </div>
               <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <span>🕒 {service.deliveryTime}</span>
-                <span>Min order: {service.minOrder}</span>
+                <span>{t('minOrder')}: {service.minOrder}</span>
               </div>
               <button className="w-full px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
-                Order Now
+                {t('orderNow')}
               </button>
             </div>
           ))}
