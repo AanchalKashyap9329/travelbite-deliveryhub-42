@@ -12,7 +12,19 @@ export const translations = {
     travelDescription: "Book bikes, taxis, and scooties with real-time tracking and flexible payment options.",
     foodDelivery: "Food Delivery",
     foodDescription: "Order from your favorite restaurants with live tracking and exclusive discounts.",
-    language: "Language"
+    language: "Language",
+    famousFood: "Famous Foods of Dantewada",
+    localDelights: "Local Delights",
+    fastFood: "Fast Food Express",
+    cafe: "Café & Beverages",
+    reviews: "reviews",
+    orderNow: "Order Now",
+    vegetarian: "Vegetarian",
+    nonVeg: "Non-veg",
+    spicy: "Spicy",
+    minOrder: "Min order",
+    back: "Back",
+    customerReviews: "Customer Reviews"
   },
   hi: {
     welcome: "डांटेसर्व में आपका स्वागत है",
@@ -26,7 +38,19 @@ export const translations = {
     travelDescription: "रीयल-टाइम ट्रैकिंग और लचीले भुगतान विकल्पों के साथ बाइक, टैक्सी और स्कूटी बुक करें।",
     foodDelivery: "खाना डिलीवरी",
     foodDescription: "लाइव ट्रैकिंग और विशेष छूट के साथ अपने पसंदीदा रेस्तरां से ऑर्डर करें।",
-    language: "भाषा"
+    language: "भाषा",
+    famousFood: "दंतेवाड़ा के प्रसिद्ध व्यंजन",
+    localDelights: "स्थानीय व्यंजन",
+    fastFood: "फास्ट फूड एक्सप्रेस",
+    cafe: "कैफे और पेय पदार्थ",
+    reviews: "समीक्षाएं",
+    orderNow: "अभी ऑर्डर करें",
+    vegetarian: "शाकाहारी",
+    nonVeg: "नॉन-वेज",
+    spicy: "तीखा",
+    minOrder: "न्यूनतम ऑर्डर",
+    back: "वापस",
+    customerReviews: "ग्राहकों की समीक्षाएं"
   },
   cgr: {
     welcome: "डांटेसर्व म स्वागत हे",
@@ -40,7 +64,19 @@ export const translations = {
     travelDescription: "लाइव ट्रैकिंग अउ आसान भुगतान के साथ बाइक, टैक्सी अउ स्कूटी बुक करव।",
     foodDelivery: "खाना डिलीवरी",
     foodDescription: "लाइव ट्रैकिंग अउ खास छूट के साथ मनपसंद होटल म से खाना मंगाव।",
-    language: "भाषा"
+    language: "भाषा",
+    famousFood: "दंतेवाड़ा के फेमस खाना मन",
+    localDelights: "लोकल खाना",
+    fastFood: "फास्ट फूड एक्सप्रेस",
+    cafe: "कैफे अउ पेय",
+    reviews: "रिव्यू मन",
+    orderNow: "अभी मंगाव",
+    vegetarian: "सब्जी-भाजी वाला",
+    nonVeg: "नॉन-वेज",
+    spicy: "तीखा",
+    minOrder: "कम से कम ऑर्डर",
+    back: "पाछू जाव",
+    customerReviews: "गिरहक मन के रिव्यू"
   }
 };
 

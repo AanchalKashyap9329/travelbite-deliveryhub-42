@@ -31,9 +31,9 @@ const FoodServices = () => {
   const foodServices: FoodOption[] = [
     {
       icon: UtensilsCrossed,
-      name: "Local Delights",
+      name: t('localDelights'),
       cuisine: "Chhattisgarhi & North Indian",
-      description: "Authentic local cuisine and north Indian favorites delivered to your doorstep",
+      description: t('foodDescription'),
       rating: 4.8,
       reviews: 342,
       deliveryTime: "30-40 min",
@@ -41,9 +41,9 @@ const FoodServices = () => {
     },
     {
       icon: Pizza,
-      name: "Fast Food Express",
+      name: t('fastFood'),
       cuisine: "Fast Food & Snacks",
-      description: "Quick bites, pizzas, burgers, and more for your cravings",
+      description: t('foodDescription'),
       rating: 4.6,
       reviews: 256,
       deliveryTime: "25-35 min",
@@ -51,9 +51,9 @@ const FoodServices = () => {
     },
     {
       icon: Coffee,
-      name: "Café & Beverages",
+      name: t('cafe'),
       cuisine: "Beverages & Snacks",
-      description: "Fresh coffee, tea, smoothies, and light snacks",
+      description: t('foodDescription'),
       rating: 4.7,
       reviews: 189,
       deliveryTime: "20-30 min",
@@ -169,7 +169,7 @@ const FoodServices = () => {
           className="flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
-          Back
+          {t('back')}
         </button>
 
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -217,7 +217,7 @@ const FoodServices = () => {
 
         {/* Local Specialties Section */}
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-          Famous Foods of Dantewada
+          {t('famousFood')}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {localDishes.map((dish, index) => (
@@ -239,27 +239,27 @@ const FoodServices = () => {
               <div className="flex items-center gap-2 mb-4">
                 {dish.isVeg ? (
                   <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm rounded-full">
-                    Vegetarian
+                    {t('vegetarian')}
                   </span>
                 ) : (
                   <span className="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 text-sm rounded-full">
-                    Non-veg
+                    {t('nonVeg')}
                   </span>
                 )}
                 {dish.isSpicy && (
                   <span className="px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-100 text-sm rounded-full">
-                    🌶️ Spicy
+                    🌶️ {t('spicy')}
                   </span>
                 )}
               </div>
               <div className="flex items-center mb-4">
                 <div className="flex mr-2">{renderStars(dish.rating)}</div>
                 <span className="text-gray-600 dark:text-gray-300">
-                  ({dish.reviews} reviews)
+                  ({dish.reviews} {t('reviews')})
                 </span>
               </div>
               <button className="w-full px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
-                Order Now
+                {t('orderNow')}
               </button>
             </div>
           ))}
@@ -268,7 +268,7 @@ const FoodServices = () => {
         {/* Reviews Section */}
         <div className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Customer Reviews
+            {t('customerReviews')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
