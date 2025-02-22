@@ -1,4 +1,3 @@
-
 export const translations = {
   en: {
     welcome: "Welcome to Danteserve",
@@ -43,7 +42,9 @@ export const translations = {
     sendMessage: "Send Message",
     sending: "Sending...",
     messageSent: "Message sent successfully!",
-    messageFailed: "Failed to send message. Please try again."
+    messageFailed: "Failed to send message. Please try again.",
+    about: "About",
+    getStarted: "Get Started"
   },
   hi: {
     welcome: "डांटेसर्व में आपका स्वागत है",
@@ -88,7 +89,9 @@ export const translations = {
     sendMessage: "संदेश भेजें",
     sending: "भेज रहा है...",
     messageSent: "संदेश सफलतापूर्वक भेजा गया!",
-    messageFailed: "संदेश भेजने में विफल। कृपया पुनः प्रयास करें।"
+    messageFailed: "संदेश भेजने में विफल। कृपया पुनः प्रयास करें।",
+    about: "हमारे बारे में",
+    getStarted: "शुरू करें"
   },
   cgr: {
     welcome: "डांटेसर्व म स्वागत हे",
@@ -133,7 +136,9 @@ export const translations = {
     sendMessage: "संदेस भेजव",
     sending: "भेज रहे हन...",
     messageSent: "संदेस भेज दिए गे हे!",
-    messageFailed: "संदेस नइ भेज पाए। फेर से कोशिश करव।"
+    messageFailed: "संदेस नइ भेज पाए। फेर से कोशिश करव।",
+    about: "हमर बारे म",
+    getStarted: "शुरू करव"
   }
 };
 
