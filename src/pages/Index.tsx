@@ -1,11 +1,21 @@
 
 import { Bike, Utensils } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import ServiceCard from "@/components/ServiceCard";
 
 const Index = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  const handleServiceClick = (service: 'travel' | 'food') => {
+    if (service === 'travel') {
+      navigate('/travel-services');
+    } else {
+      navigate('/food-services');
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
@@ -24,10 +34,16 @@ const Index = () => {
             {t('heroDescription')}
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-up">
-            <button className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full text-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+            <button 
+              onClick={() => handleServiceClick('travel')}
+              className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full text-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+            >
               {t('bookRide')}
             </button>
-            <button className="px-8 py-3 bg-white dark:bg-gray-800 text-black dark:text-white border border-gray-200 dark:border-gray-700 rounded-full text-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <button 
+              onClick={() => handleServiceClick('food')}
+              className="px-8 py-3 bg-white dark:bg-gray-800 text-black dark:text-white border border-gray-200 dark:border-gray-700 rounded-full text-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+            >
               {t('orderFood')}
             </button>
           </div>
@@ -44,16 +60,20 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <ServiceCard
-              title={t('travelServices')}
-              description={t('travelDescription')}
-              icon={Bike}
-            />
-            <ServiceCard
-              title={t('foodDelivery')}
-              description={t('foodDescription')}
-              icon={Utensils}
-            />
+            <div onClick={() => handleServiceClick('travel')}>
+              <ServiceCard
+                title={t('travelServices')}
+                description={t('travelDescription')}
+                icon={Bike}
+              />
+            </div>
+            <div onClick={() => handleServiceClick('food')}>
+              <ServiceCard
+                title={t('foodDelivery')}
+                description={t('foodDescription')}
+                icon={Utensils}
+              />
+            </div>
           </div>
         </div>
       </section>
