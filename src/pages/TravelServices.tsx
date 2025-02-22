@@ -117,13 +117,13 @@ const TravelServices = () => {
                 name: "Rahul Singh",
                 rating: 5,
                 comment: t('reviewComment1'),
-                date: t('daysAgo', { days: 2 })
+                date: t('daysAgo')
               },
               {
                 name: "Priya Sharma",
                 rating: 4.5,
                 comment: t('reviewComment2'),
-                date: t('weeksAgo', { weeks: 1 })
+                date: t('weeksAgo')
               }
             ].map((review, index) => (
               <div
