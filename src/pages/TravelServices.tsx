@@ -19,25 +19,25 @@ const TravelServices = () => {
   const services: ServiceOption[] = [
     {
       icon: Bike,
-      name: "Bike Rental",
+      name: t('bikeRental'),
       price: "₹299/day",
-      description: "Comfortable bikes for your daily commute or adventure rides",
+      description: t('bikeDescription'),
       rating: 4.8,
       reviews: 127
     },
     {
       icon: Car,
-      name: "Taxi Service",
+      name: t('taxiService'),
       price: "₹15/km",
-      description: "Reliable and safe taxi service with professional drivers",
+      description: t('taxiDescription'),
       rating: 4.7,
       reviews: 243
     },
     {
       icon: BikeAlt,
-      name: "Scooty Rental",
+      name: t('scootyRental'),
       price: "₹249/day",
-      description: "Easy to ride scooties perfect for city navigation",
+      description: t('scootyDescription'),
       rating: 4.9,
       reviews: 156
     }
@@ -58,14 +58,13 @@ const TravelServices = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-6">
-      {/* Header */}
       <div className="max-w-7xl mx-auto">
         <button
           onClick={() => navigate(-1)}
           className="flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
-          Back
+          {t('back')}
         </button>
 
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -75,7 +74,6 @@ const TravelServices = () => {
           {t('travelDescription')}
         </p>
 
-        {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
@@ -94,7 +92,7 @@ const TravelServices = () => {
               <div className="flex items-center mb-3">
                 <div className="flex mr-2">{renderStars(service.rating)}</div>
                 <span className="text-gray-600 dark:text-gray-300">
-                  ({service.reviews} reviews)
+                  ({service.reviews} {t('reviews')})
                 </span>
               </div>
               <div className="flex items-center justify-between">
@@ -102,31 +100,30 @@ const TravelServices = () => {
                   {service.price}
                 </span>
                 <button className="px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
-                  Book Now
+                  {t('bookNow')}
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Reviews Section */}
         <div className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Customer Reviews
+            {t('customerReviews')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
                 name: "Rahul Singh",
                 rating: 5,
-                comment: "Great service! The bike was in perfect condition and the staff was very helpful.",
-                date: "2 days ago"
+                comment: t('reviewComment1'),
+                date: t('daysAgo', { days: 2 })
               },
               {
                 name: "Priya Sharma",
                 rating: 4.5,
-                comment: "Very convenient taxi service. The driver was professional and punctual.",
-                date: "1 week ago"
+                comment: t('reviewComment2'),
+                date: t('weeksAgo', { weeks: 1 })
               }
             ].map((review, index) => (
               <div

@@ -24,7 +24,18 @@ export const translations = {
     spicy: "Spicy",
     minOrder: "Min order",
     back: "Back",
-    customerReviews: "Customer Reviews"
+    customerReviews: "Customer Reviews",
+    bikeRental: "Bike Rental",
+    taxiService: "Taxi Service",
+    scootyRental: "Scooty Rental",
+    bikeDescription: "Comfortable bikes for your daily commute or adventure rides",
+    taxiDescription: "Reliable and safe taxi service with professional drivers",
+    scootyDescription: "Easy to ride scooties perfect for city navigation",
+    bookNow: "Book Now",
+    daysAgo: "2 days ago",
+    weeksAgo: "1 week ago",
+    reviewComment1: "Great service! The bike was in perfect condition and the staff was very helpful.",
+    reviewComment2: "Very convenient taxi service. The driver was professional and punctual."
   },
   hi: {
     welcome: "डांटेसर्व में आपका स्वागत है",
@@ -50,7 +61,18 @@ export const translations = {
     spicy: "तीखा",
     minOrder: "न्यूनतम ऑर्डर",
     back: "वापस",
-    customerReviews: "ग्राहकों की समीक्षाएं"
+    customerReviews: "ग्राहकों की समीक्षाएं",
+    bikeRental: "बाइक किराये पर",
+    taxiService: "टैक्सी सेवा",
+    scootyRental: "स्कूटी किराये पर",
+    bikeDescription: "दैनिक यात्रा या साहसिक सवारी के लिए आरामदायक बाइक",
+    taxiDescription: "पेशेवर ड्राइवरों के साथ विश्वसनीय और सुरक्षित टैक्सी सेवा",
+    scootyDescription: "शहर में आसानी से चलने वाली स्कूटी",
+    bookNow: "अभी बुक करें",
+    daysAgo: "2 दिन पहले",
+    weeksAgo: "1 सप्ताह पहले",
+    reviewComment1: "बेहतरीन सेवा! बाइक एकदम सही हालत में थी और स्टाफ बहुत मददगार था।",
+    reviewComment2: "बहुत सुविधाजनक टैक्सी सेवा। ड्राइवर पेशेवर और समय का पाबंद था।"
   },
   cgr: {
     welcome: "डांटेसर्व म स्वागत हे",
@@ -76,7 +98,18 @@ export const translations = {
     spicy: "तीखा",
     minOrder: "कम से कम ऑर्डर",
     back: "पाछू जाव",
-    customerReviews: "गिरहक मन के रिव्यू"
+    customerReviews: "गिरहक मन के रिव्यू",
+    bikeRental: "बाइक किराया म",
+    taxiService: "टैक्सी सेवा",
+    scootyRental: "स्कूटी किराया म",
+    bikeDescription: "रोज के सफर या घूमे बर आरामदायक बाइक",
+    taxiDescription: "अच्छा ड्राइवर मन के संग सुरक्षित टैक्सी सेवा",
+    scootyDescription: "सहर म आसानी से चले वाली स्कूटी",
+    bookNow: "अभी बुक करव",
+    daysAgo: "2 दिन पहिली",
+    weeksAgo: "1 हफ्ता पहिली",
+    reviewComment1: "बढ़िया सेवा! बाइक एकदम नवा जइसन रहिस अउ स्टाफ बहुत मददगार रहिन।",
+    reviewComment2: "बहुत बढ़िया टैक्सी सेवा। ड्राइवर टेम पे आथे अउ अच्छा से बात करथे।"
   }
 };
 
