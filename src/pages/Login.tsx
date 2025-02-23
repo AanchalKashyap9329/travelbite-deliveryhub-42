@@ -27,7 +27,7 @@ const Login = () => {
         title: "Success",
         description: t('loginSuccess'),
       });
-      navigate("/get-started");
+      navigate("/get-started"); // Changed from /dashboard to /get-started
     } catch (error) {
       toast({
         title: "Error",
