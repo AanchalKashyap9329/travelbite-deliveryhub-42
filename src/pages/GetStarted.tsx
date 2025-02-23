@@ -27,7 +27,7 @@ const GetStarted = () => {
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
-            {t('welcomeUser', { name: userName || 'User' })}
+            {t('welcomeUser').replace('{{name}}', userName || 'User')}
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
             {t('getStartedDescription')}
