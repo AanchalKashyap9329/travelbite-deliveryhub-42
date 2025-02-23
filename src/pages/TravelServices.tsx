@@ -11,6 +11,7 @@ interface ServiceOption {
   description: string;
   rating: number;
   reviews: number;
+  image: string;
 }
 
 const TravelServices = () => {
@@ -26,7 +27,8 @@ const TravelServices = () => {
         price: "₹299/day",
         description: t('bikeDescription'),
         rating: 4.8,
-        reviews: 127
+        reviews: 127,
+        image: "https://images.unsplash.com/photo-1472396961693-142e6e269027"
       },
       {
         icon: Car,
@@ -34,7 +36,8 @@ const TravelServices = () => {
         price: "₹15/km",
         description: t('taxiDescription'),
         rating: 4.7,
-        reviews: 243
+        reviews: 243,
+        image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d"
       },
       {
         icon: BikeAlt,
@@ -42,7 +45,8 @@ const TravelServices = () => {
         price: "₹249/day",
         description: t('scootyDescription'),
         rating: 4.9,
-        reviews: 156
+        reviews: 156,
+        image: "https://images.unsplash.com/photo-1438565434616-3ef039228b15"
       }
     ]);
   }, [t, currentLanguage]);
@@ -82,8 +86,15 @@ const TravelServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
             >
+              <div className="relative h-48 -mx-6 -mt-6 mb-6">
+                <img 
+                  src={service.image} 
+                  alt={service.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="w-12 h-12 bg-black/5 dark:bg-white/5 rounded-full flex items-center justify-center mb-4">
                 <service.icon className="w-6 h-6 text-gray-900 dark:text-white" />
               </div>

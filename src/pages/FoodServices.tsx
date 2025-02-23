@@ -1,3 +1,4 @@
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Star, ArrowLeft, UtensilsCrossed, Coffee, Pizza } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +13,7 @@ interface FoodOption {
   reviews: number;
   deliveryTime: string;
   minOrder: string;
+  image: string;
 }
 
 interface LocalDish {
@@ -22,6 +24,7 @@ interface LocalDish {
   reviews: number;
   isSpicy?: boolean;
   isVeg: boolean;
+  image?: string;
 }
 
 const FoodServices = () => {
@@ -39,7 +42,8 @@ const FoodServices = () => {
         rating: 4.8,
         reviews: 342,
         deliveryTime: "30-40 min",
-        minOrder: "₹99"
+        minOrder: "₹99",
+        image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
       },
       {
         icon: Pizza,
@@ -49,7 +53,8 @@ const FoodServices = () => {
         rating: 4.6,
         reviews: 256,
         deliveryTime: "25-35 min",
-        minOrder: "₹149"
+        minOrder: "₹149",
+        image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3"
       },
       {
         icon: Coffee,
@@ -59,7 +64,8 @@ const FoodServices = () => {
         rating: 4.7,
         reviews: 189,
         deliveryTime: "20-30 min",
-        minOrder: "₹79"
+        minOrder: "₹79",
+        image: "https://images.unsplash.com/photo-1472396961693-142e6e269027"
       }
     ]);
   }, [t, currentLanguage]);
@@ -187,8 +193,15 @@ const FoodServices = () => {
           {foodServices.map((service, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
             >
+              <div className="relative h-48 -mx-6 -mt-6 mb-6">
+                <img 
+                  src={service.image} 
+                  alt={service.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="w-12 h-12 bg-black/5 dark:bg-white/5 rounded-full flex items-center justify-center mb-4">
                 <service.icon className="w-6 h-6 text-gray-900 dark:text-white" />
               </div>
