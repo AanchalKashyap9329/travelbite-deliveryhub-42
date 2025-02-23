@@ -31,16 +31,17 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      // Add your signup logic here
+      // Simulating signup process
+      localStorage.setItem("userName", formData.name);
       toast({
         title: "Success",
-        description: "Account created successfully!",
+        description: t('accountCreatedSuccess'),
       });
       navigate("/login");
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to create account. Please try again.",
+        description: t('signupError'),
         variant: "destructive",
       });
     } finally {

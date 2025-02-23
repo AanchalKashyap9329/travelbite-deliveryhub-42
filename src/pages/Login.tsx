@@ -21,16 +21,17 @@ const Login = () => {
     setLoading(true);
 
     try {
-      // Add your login logic here
+      // Simulating login process
+      localStorage.setItem("isLoggedIn", "true");
       toast({
         title: "Success",
-        description: "Login successful!",
+        description: t('loginSuccess'),
       });
-      navigate("/dashboard");
+      navigate("/get-started");
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to login. Please try again.",
+        description: t('loginError'),
         variant: "destructive",
       });
     } finally {

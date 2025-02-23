@@ -11,6 +11,7 @@ import TravelServices from "./pages/TravelServices";
 import FoodServices from "./pages/FoodServices";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import GetStarted from "./pages/GetStarted";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/food-services" element={<FoodServices />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/get-started" element={<GetStarted />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
