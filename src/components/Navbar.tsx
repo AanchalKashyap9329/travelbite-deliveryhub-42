@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
@@ -8,13 +9,20 @@ import LanguageSelector from "./LanguageSelector";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/signup');
+  };
 
   return (
     <nav className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-xl font-semibold text-gray-900 dark:text-white">Danteserve</span>
+            <span className="text-xl font-semibold text-gray-900 dark:text-white cursor-pointer" onClick={() => navigate('/')}>
+              Danteserve
+            </span>
           </div>
           
           {/* Desktop menu */}
@@ -32,7 +40,10 @@ const Navbar = () => {
             </div>
             <LanguageSelector />
             <ThemeToggle />
-            <button className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+            <button 
+              onClick={handleGetStarted}
+              className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+            >
               {t('getStarted')}
             </button>
           </div>
@@ -65,7 +76,10 @@ const Navbar = () => {
               <div className="px-3 py-2">
                 <LanguageSelector />
               </div>
-              <button className="w-full mt-4 bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+              <button 
+                onClick={handleGetStarted}
+                className="w-full mt-4 bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+              >
                 {t('getStarted')}
               </button>
             </div>

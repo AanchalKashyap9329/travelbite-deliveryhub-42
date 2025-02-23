@@ -44,7 +44,16 @@ export const translations = {
     messageSent: "Message sent successfully!",
     messageFailed: "Failed to send message. Please try again.",
     about: "About",
-    getStarted: "Get Started"
+    getStarted: "Get Started",
+    login: "Login",
+    signUp: "Sign Up",
+    password: "Password",
+    confirmPassword: "Confirm Password",
+    loggingIn: "Logging in...",
+    creatingAccount: "Creating account...",
+    noAccount: "Don't have an account?",
+    alreadyHaveAccount: "Already have an account?",
+    passwordsDoNotMatch: "Passwords do not match"
   },
   hi: {
     welcome: "डांटेसर्व में आपका स्वागत है",
@@ -91,7 +100,16 @@ export const translations = {
     messageSent: "संदेश सफलतापूर्वक भेजा गया!",
     messageFailed: "संदेश भेजने में विफल। कृपया पुनः प्रयास करें।",
     about: "हमारे बारे में",
-    getStarted: "शुरू करें"
+    getStarted: "शुरू करें",
+    login: "लॉग इन",
+    signUp: "साइन अप",
+    password: "पासवर्ड",
+    confirmPassword: "पासवर्ड की पुष्टि करें",
+    loggingIn: "लॉग इन हो रहा है...",
+    creatingAccount: "खाता बनाया जा रहा है...",
+    noAccount: "खाता नहीं है?",
+    alreadyHaveAccount: "पहले से एक खाता है?",
+    passwordsDoNotMatch: "पासवर्ड मेल नहीं खाते"
   },
   cgr: {
     welcome: "डांटेसर्व म स्वागत हे",
@@ -138,7 +156,16 @@ export const translations = {
     messageSent: "संदेस भेज दिए गे हे!",
     messageFailed: "संदेस नइ भेज पाए। फेर से कोशिश करव।",
     about: "हमर बारे म",
-    getStarted: "शुरू करव"
+    getStarted: "शुरू करव",
+    login: "लॉगिन",
+    signUp: "साइन अप",
+    password: "पासवर्ड",
+    confirmPassword: "पासवर्ड फेर से डालव",
+    loggingIn: "लॉगिन होथे...",
+    creatingAccount: "खाता बनत हे...",
+    noAccount: "खाता नइ हे?",
+    alreadyHaveAccount: "पहिली से खाता हे?",
+    passwordsDoNotMatch: "पासवर्ड एक जइसन नइ हे"
   }
 };
 
