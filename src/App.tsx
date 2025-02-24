@@ -12,6 +12,7 @@ import FoodServices from "./pages/FoodServices";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import GetStarted from "./pages/GetStarted";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +30,7 @@ const App = () => (
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/get-started" element={<GetStarted />} />
-            {/* Redirect /dashboard to /get-started */}
+            <Route path="/about" element={<About />} />
             <Route path="/dashboard" element={<Navigate to="/get-started" replace />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
