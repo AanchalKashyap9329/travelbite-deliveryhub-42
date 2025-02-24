@@ -77,7 +77,8 @@ const FoodServices = () => {
       price: "₹40",
       rating: 4.8,
       reviews: 156,
-      isVeg: true
+      isVeg: true,
+      image: "https://images.unsplash.com/photo-1634877520677-e931f818cc1c"
     },
     {
       name: "Aamat",
@@ -86,7 +87,8 @@ const FoodServices = () => {
       rating: 4.7,
       reviews: 143,
       isSpicy: true,
-      isVeg: true
+      isVeg: true,
+      image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
     },
     {
       name: "Dubki Kadhi",
@@ -94,7 +96,8 @@ const FoodServices = () => {
       price: "₹80",
       rating: 4.6,
       reviews: 128,
-      isVeg: true
+      isVeg: true,
+      image: "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10"
     },
     {
       name: "Faraa",
@@ -102,7 +105,8 @@ const FoodServices = () => {
       price: "₹60",
       rating: 4.5,
       reviews: 112,
-      isVeg: true
+      isVeg: true,
+      image: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c"
     },
     {
       name: "Muthia",
@@ -111,7 +115,8 @@ const FoodServices = () => {
       rating: 4.7,
       reviews: 167,
       isSpicy: true,
-      isVeg: true
+      isVeg: true,
+      image: "https://images.unsplash.com/photo-1567337710282-00832b415979"
     },
     {
       name: "Chapda Chutney",
@@ -120,7 +125,8 @@ const FoodServices = () => {
       rating: 4.9,
       reviews: 89,
       isSpicy: true,
-      isVeg: false
+      isVeg: false,
+      image: "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10"
     },
     {
       name: "Bore Baasi",
@@ -128,7 +134,8 @@ const FoodServices = () => {
       price: "₹30",
       rating: 4.4,
       reviews: 95,
-      isVeg: true
+      isVeg: true,
+      image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd"
     },
     {
       name: "Tilgur Laddu",
@@ -136,7 +143,8 @@ const FoodServices = () => {
       price: "₹20/piece",
       rating: 4.8,
       reviews: 178,
-      isVeg: true
+      isVeg: true,
+      image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e"
     },
     {
       name: "Dehati Chicken",
@@ -145,7 +153,8 @@ const FoodServices = () => {
       rating: 4.9,
       reviews: 234,
       isSpicy: true,
-      isVeg: false
+      isVeg: false,
+      image: "https://images.unsplash.com/photo-1606728035253-49e8a23146de"
     },
     {
       name: "Mahua Drink",
@@ -153,7 +162,8 @@ const FoodServices = () => {
       price: "₹40",
       rating: 4.6,
       reviews: 145,
-      isVeg: true
+      isVeg: true,
+      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e"
     }
   ];
 
@@ -241,6 +251,15 @@ const FoodServices = () => {
               key={index}
               className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
+              {dish.image && (
+                <div className="relative h-48 -mx-6 -mt-6 mb-6">
+                  <img 
+                    src={dish.image} 
+                    alt={dish.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {dish.name}
