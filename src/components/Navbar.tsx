@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
@@ -36,13 +36,22 @@ const Navbar = () => {
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-6">
             <div className="flex items-baseline space-x-4">
-              <a href="#services" className="text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link 
+                to="/travel-services" 
+                className="text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
                 {t('ourServices')}
-              </a>
-              <a href="#about" className="text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link 
+                to="/about" 
+                className="text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
                 {t('about')}
-              </a>
-              <a href="#contact" className="text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <a 
+                href="#contact" 
+                className="text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
                 {t('contact')}
               </a>
             </div>
@@ -56,7 +65,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu */}
           <div className="md:hidden flex items-center space-x-4">
             <ThemeToggle />
             <button
@@ -72,13 +81,22 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#services" className="block text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-base font-medium">
+              <Link 
+                to="/travel-services"
+                className="block text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-base font-medium"
+              >
                 {t('ourServices')}
-              </a>
-              <a href="#about" className="block text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <Link 
+                to="/about"
+                className="block text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-base font-medium"
+              >
                 {t('about')}
-              </a>
-              <a href="#contact" className="block text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <a 
+                href="#contact" 
+                className="block text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white px-3 py-2 rounded-md text-base font-medium"
+              >
                 {t('contact')}
               </a>
               <div className="px-3 py-2">
