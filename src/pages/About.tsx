@@ -37,92 +37,68 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              Danteserve aims to revolutionize how people in Chhattisgarh experience travel and food services. We bring convenience, reliability, and local flavors right to your fingertips, making every journey and meal memorable.
+              At Danteserve, we strive to make travel and food services accessible, reliable, and enjoyable for everyone in Chhattisgarh. Our platform connects you with quality transportation options and delicious local cuisine.
             </p>
           </div>
 
-          {/* What We Offer */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              What We Offer
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Travel Services
-                </h3>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                  <li>• Comfortable and reliable bike rentals</li>
-                  <li>• Professional taxi services</li>
-                  <li>• Convenient scooty rentals</li>
-                  <li>• 24/7 customer support</li>
-                  <li>• GPS-enabled vehicle tracking</li>
-                  <li>• Flexible rental durations</li>
-                </ul>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Food Services
-                </h3>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                  <li>• Local Chhattisgarhi cuisine</li>
-                  <li>• Fast food delivery</li>
-                  <li>• Café & beverage options</li>
-                  <li>• Live order tracking</li>
-                  <li>• Multiple payment options</li>
-                  <li>• Special dietary considerations</li>
-                </ul>
-              </div>
+          {/* Services Section */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Travel Services
+              </h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                <li>• Reliable bike rentals</li>
+                <li>• Professional taxi services</li>
+                <li>• Convenient scooty rentals</li>
+                <li>• 24/7 customer support</li>
+                <li>• Competitive pricing</li>
+              </ul>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Food Services
+              </h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                <li>• Local cuisine delivery</li>
+                <li>• Quick food delivery</li>
+                <li>• Multiple restaurant options</li>
+                <li>• Real-time order tracking</li>
+                <li>• Special dietary options</li>
+              </ul>
             </div>
           </div>
 
-          {/* Why Choose Us */}
+          {/* Why Choose Us Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Why Choose Danteserve?
             </h2>
-            <div className="grid gap-6">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            <div className="space-y-6">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   Local Expertise
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We understand Chhattisgarh like no other. Our deep roots in the local community help us provide services that are perfectly tailored to local needs and preferences.
+                  Deep understanding of Chhattisgarh's transportation needs and food preferences.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Quality Assurance
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  Quality Service
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  All our vehicles undergo regular maintenance, and our food partners are carefully selected to ensure the highest quality standards in hygiene and taste.
+                  Committed to providing reliable, safe, and high-quality services to our customers.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Customer-Centric Approach
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  Customer Support
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Our dedicated support team is available round the clock to assist you. We value your feedback and continuously improve our services based on customer suggestions.
+                  24/7 dedicated support team to assist you with any queries or concerns.
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* Safety & Hygiene */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Safety & Hygiene Standards
-            </h2>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-              <ul className="space-y-4 text-gray-600 dark:text-gray-300">
-                <li>• Regular sanitization of all vehicles</li>
-                <li>• Strict food safety protocols</li>
-                <li>• Verified and trained delivery partners</li>
-                <li>• Contactless delivery options</li>
-                <li>• Regular health checks for staff</li>
-                <li>• GPS tracking for all deliveries</li>
-              </ul>
             </div>
           </div>
         </div>
