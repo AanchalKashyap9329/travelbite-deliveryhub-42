@@ -19,10 +19,18 @@ const Navbar = () => {
     <nav className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <span className="text-xl font-semibold text-gray-900 dark:text-white cursor-pointer" onClick={() => navigate('/')}>
-              Danteserve
-            </span>
+          <div className="flex-shrink-0 flex items-center">
+            <div 
+              className="cursor-pointer flex items-center gap-2" 
+              onClick={() => navigate('/')}
+            >
+              <div className="w-8 h-8 bg-black dark:bg-white rounded-lg flex items-center justify-center">
+                <span className="text-lg font-bold text-white dark:text-black">D</span>
+              </div>
+              <span className="text-xl font-semibold text-gray-900 dark:text-white">
+                Danteserve
+              </span>
+            </div>
           </div>
           
           {/* Desktop menu */}
