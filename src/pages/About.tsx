@@ -22,7 +22,7 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-up">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               About Danteserve
             </h1>
@@ -32,7 +32,7 @@ const About = () => {
           </div>
 
           {/* Mission Section */}
-          <div className="mb-16">
+          <div className="mb-16 animate-fade-up" style={{ animationDelay: "100ms" }}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Our Mission
             </h2>
@@ -42,8 +42,8 @@ const About = () => {
           </div>
 
           {/* Services Section */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div className="grid md:grid-cols-2 gap-8 mb-16 animate-fade-up" style={{ animationDelay: "200ms" }}>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Travel Services
               </h3>
@@ -55,7 +55,7 @@ const About = () => {
                 <li>• Competitive pricing</li>
               </ul>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Food Services
               </h3>
@@ -70,12 +70,12 @@ const About = () => {
           </div>
 
           {/* Why Choose Us Section */}
-          <div className="mb-16">
+          <div className="mb-16 animate-fade-up" style={{ animationDelay: "300ms" }}>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Why Choose Danteserve?
             </h2>
             <div className="space-y-6">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   Local Expertise
                 </h3>
@@ -83,7 +83,7 @@ const About = () => {
                   Deep understanding of Chhattisgarh's transportation needs and food preferences.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   Quality Service
                 </h3>
@@ -91,7 +91,7 @@ const About = () => {
                   Committed to providing reliable, safe, and high-quality services to our customers.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   Customer Support
                 </h3>
