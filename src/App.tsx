@@ -1,7 +1,7 @@
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -17,27 +17,27 @@ import About from "./pages/About";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <LanguageProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/travel-services" element={<TravelServices />} />
-            <Route path="/food-services" element={<FoodServices />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/get-started" element={<GetStarted />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/dashboard" element={<Navigate to="/get-started" replace />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </LanguageProvider>
-  </QueryClientProvider>
+  <TooltipProvider>
+    <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/travel-services" element={<TravelServices />} />
+              <Route path="/food-services" element={<FoodServices />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/get-started" element={<GetStarted />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/dashboard" element={<Navigate to="/get-started" replace />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+      </LanguageProvider>
+    </QueryClientProvider>
+  </TooltipProvider>
 );
 
 export default App;
